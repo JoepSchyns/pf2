@@ -1,0 +1,22 @@
+<template name="dashboard">
+{{#each athlete}}
+Hey {{firstname}} {{lastname}} <br>
+You have {{bikeCount}} bikes <br>
+and summited this beautifull picture op yours: <br>
+<img src="{{profile}}">
+{{/each}}
+<br>
+These are your activities: <br>
+<ul>
+{{#each activities}}
+	<li>{{name}} 
+	{{#each activity id}}
+
+		You cycled by average <b>{{average_speed}}</b> and used <b>{{calories}}</b> calories.
+
+
+	{{/each}}
+	</li>
+{{/each}}
+</ul>
+</template>
